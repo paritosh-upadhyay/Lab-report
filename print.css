@@ -1,0 +1,14 @@
+/* Hide the form and buttons when printing */
+#reportForm,
+button {
+    display: none;
+}
+
+/* Ensure the report container is displayed when printing */
+#reportContainer {
+    display: block;
+}
+
+.filepath {
+    display: none;
+}

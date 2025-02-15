@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janhit Pathology Report</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="print.css" media="print">
+</head>
+
+<body>
+    <div class="container">
+        <form id="reportForm">
+            <label for="patientName">Patient’s Name:</label>
+            <input type="text" id="patientName" name="patientName" required><br>
+
+            <label for="ageSex">Age / Sex:</label>
+            <input type="text" id="ageSex" name="ageSex" required><br>
+
+            <label for="referredBy">Referred By:</label>
+            <input type="text" id="referredBy" name="referredBy" value="Dr. RR Singh"  required><br>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br>
+
+            <h3>Hematology Test: CBC</h3>
+            <label for="hemoglobin">Hemoglobin (gm/dl):</label>
+            <input type="number" step="0.1" id="hemoglobin" name="hemoglobin" required><br>
+
+            <label for="tlc">TLC (/c.mm):</label>
+            <input type="number" id="tlc" name="tlc" required><br>
+
+            <label for="rbc">RBC (Mil/cmm):</label>
+            <input type="number" step="0.01" id="rbc" name="rbc" required><br>
+
+            <label for="neutrophils">Neutrophils (%):</label>
+            <input type="number" step="0.1" id="neutrophils" name="neutrophils" required><br>
+
+            <label for="lymphocytes">Lymphocytes (%):</label>
+            <input type="number" step="0.1" id="lymphocytes" name="lymphocytes" required><br>
+
+            <label for="eosinophils">Eosinophils (%):</label>
+            <input type="number" step="0.1" id="eosinophils" name="eosinophils" required><br>
+
+            <label for="monocytes">Monocytes (%):</label>
+            <input type="number" step="0.1" id="monocytes" name="monocytes" required><br>
+
+            <label for="basophils">Basophils (%):</label>
+            <input type="number" step="0.1" id="basophils" name="basophils" required><br>
+
+            <label for="plateletCount">Platelet Count (lakh/cmm):</label>
+            <input type="number" step="0.01" id="plateletCount" name="plateletCount" required><br>
+
+            <h3>Widal Test</h3>
+            <label for="typhiO_1_20">S Typhi ‘O’ 1/20:</label>
+            <input type="text" id="typhiO_1_20" name="typhiO_1_20" required><br>
+
+            <label for="typhiO_1_40">S Typhi ‘O’ 1/40:</label>
+            <input type="text" id="typhiO_1_40" name="typhiO_1_40" required><br>
+
+            <label for="typhiO_1_80">S Typhi ‘O’ 1/80:</label>
+            <input type="text" id="typhiO_1_80" name="typhiO_1_80" required><br>
+
+            <label for="typhiO_1_160">S Typhi ‘O’ 1/160:</label>
+            <input type="text" id="typhiO_1_160" name="typhiO_1_160" required><br>
+
+            <label for="typhiO_1_320">S Typhi ‘O’ 1/320:</label>
+            <input type="text" id="typhiO_1_320" name="typhiO_1_320" required><br>
+
+            <label for="typhiH_1_20">S Typhi ‘H’ 1/20:</label>
+            <input type="text" id="typhiH_1_20" name="typhiH_1_20" required><br>
+
+            <label for="typhiH_1_40">S Typhi ‘H’ 1/40:</label>
+            <input type="text" id="typhiH_1_40" name="typhiH_1_40" required><br>
+
+            <label for="typhiH_1_80">S Typhi ‘H’ 1/80:</label>
+            <input type="text" id="typhiH_1_80" name="typhiH_1_80" required><br>
+
+            <label for="typhiH_1_160">S Typhi ‘H’ 1/160:</label>
+            <input type="text" id="typhiH_1_160" name="typhiH_1_160" required><br>
+
+            <label for="typhiH_1_320">S Typhi ‘H’ 1/320:</label>
+            <input type="text" id="typhiH_1_320" name="typhiH_1_320" required><br>
+
+            <label for="paratyphiAH_1_20">S Paratyphi ‘AH’ 1/20:</label>
+            <input type="text" id="paratyphiAH_1_20" name="paratyphiAH_1_20" required><br>
+
+            <label for="paratyphiAH_1_40">S Paratyphi ‘AH’ 1/40:</label>
+            <input type="text" id="paratyphiAH_1_40" name="paratyphiAH_1_40" required><br>
+
+            <label for="paratyphiAH_1_80">S Paratyphi ‘AH’ 1/80:</label>
+            <input type="text" id="paratyphiAH_1_80" name="paratyphiAH_1_80" required><br>
+
+            <label for="paratyphiAH_1_160">S Paratyphi ‘AH’ 1/160:</label>
+            <input type="text" id="paratyphiAH_1_160" name="paratyphiAH_1_160" required><br>
+
+            <label for="paratyphiAH_1_320">S Paratyphi ‘AH’ 1/320:</label>
+            <input type="text" id="paratyphiAH_1_320" name="paratyphiAH_1_320" required><br>
+
+            <label for="paratyphiBH_1_20">S Paratyphi ‘BH’ 1/20:</label>
+            <input type="text" id="paratyphiBH_1_20" name="paratyphiBH_1_20" required><br>
+
+            <label for="paratyphiBH_1_40">S Paratyphi ‘BH’ 1/40:</label>
+            <input type="text" id="paratyphiBH_1_40" name="paratyphiBH_1_40" required><br>
+
+            <label for="paratyphiBH_1_80">S Paratyphi ‘BH’ 1/80:</label>
+            <input type="text" id="paratyphiBH_1_80" name="paratyphiBH_1_80" required><br>
+
+            <label for="paratyphiBH_1_160">S Paratyphi ‘BH’ 1/160:</label>
+            <input type="text" id="paratyphiBH_1_160" name="paratyphiBH_1_160" required><br>
+
+            <label for="paratyphiBH_1_320">S Paratyphi ‘BH’ 1/320:</label>
+            <input type="text" id="paratyphiBH_1_320" name="paratyphiBH_1_320" required><br>
+
+            <h3>Blood Sugar Test</h3>
+            <label for="randomglucose">Random Glucose (mg/dl):</label>
+            <input type="number" id="randomglucose" name="randomglucose" required><br>
+
+            <label for="fastingglucose">Fasting Glucose (mg/dl):</label>
+            <input type="number" id="fastingglucose" name="fastingglucose" required><br>
+
+            <label for="ppglucose">P.P. Glucose (mg/dl):</label>
+            <input type="number" id="ppglucose" name="ppglucose" required><br>
+
+            <h3>Liver Function Test (LFT)</h3>
+            <label for="bilirubinTotal">Bilirubin Total (mg/dl):</label>
+            <input type="number" step="0.01" id="bilirubinTotal" name="bilirubinTotal" required><br>
+
+            <label for="bilirubinDirect">Bilirubin Direct (mg/dl):</label>
+            <input type="number" step="0.01" id="bilirubinDirect" name="bilirubinDirect" required><br>
+
+            <label for="bilirubinIndirect">Bilirubin Indirect (mg/dl):</label>
+            <input type="number" step="0.01" id="bilirubinIndirect" name="bilirubinIndirect" required><br>
+
+            <label for="sgot">SGOT (AST) (U/L):</label>
+            <input type="number" step="0.1" id="sgot" name="sgot" required><br>
+
+            <label for="sgpt">SGPT (ALT) (U/L):</label>
+            <input type="number" step="0.1" id="sgpt" name="sgpt" required><br>
+
+            <label for="alkalinePhosphatase">Alkaline Phosphatase (U/L):</label>
+            <input type="number" step="0.1" id="alkalinePhosphatase" name="alkalinePhosphatase" required><br>
+
+            <label for="totalProtein">Total Protein (g/dl):</label>
+            <input type="number" step="0.1" id="totalProtein" name="totalProtein" required><br>
+
+            <label for="albumin">Albumin (g/dl):</label>
+            <input type="number" step="0.1" id="albumin" name="albumin" required><br>
+
+            <label for="globulin">Globulin (g/dl):</label>
+            <input type="number" step="0.1" id="globulin" name="globulin" required><br>
+
+            <h3>Renal Function Test (RFT)</h3>
+            <label for="urea">Blood Urea (mg/dl):</label>
+            <input type="number" step="0.1" id="urea" name="urea" required><br>
+
+            <label for="creatinine">Serum Creatinine (mg/dl):</label>
+            <input type="number" step="0.1" id="creatinine" name="creatinine" required><br>
+
+            <label for="uricAcid">Serum Uric Acid (mg/dl):</label>
+            <input type="number" step="0.1" id="uricAcid" name="uricAcid" required><br>
+
+            <label for="sodium">Serum Sodium (mEq/L):</label>
+            <input type="number" step="0.1" id="sodium" name="sodium" required><br>
+
+            <label for="potassium">Serum Potassium (mEq/L):</label>
+            <input type="number" step="0.1" id="potassium" name="potassium" required><br>
+
+            <label for="chloride">Serum Chloride (mEq/L):</label>
+            <input type="number" step="0.1" id="chloride" name="chloride" required><br>
+
+            <h3>Semen Analysis</h3>
+            <h4> Physical Examination</h4>
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color" required><br>
+
+            <label for="volume">Volume:</label>
+            <input type="number" id="volume" name="volume" required><br>
+
+            <label for="appearance">Appearance:</label>
+            <input type="text" id="appearance" name="appearance" required><br>
+
+            <label for="motility">Motility:</label>
+            <input type="number" step="0.1" id="motility" name="motility" required><br>
+
+            <label for="spermCount">Sperm Count:</label>
+            <input type="number" step="0.1" id="spermCount" name="spermCount" required><br>
+
+            <h4>Chemical Examination</h4>
+            <label for="ph">pH:</label>
+            <input type="number" step="0.1" id="ph" name="ph" required><br>
+
+            <label for="fructose">Fructose</label>
+            <input type="text" id="fructose" name="fructose" required><br>
+
+            <label for="morphology">Morphology</label>
+            <input type="number" step="0.1" id="morphology" name="morphology" required><br>
+
+            <h3>Lipid Profile</h3>
+            <label for="cholesterol">Serum Cholesterol (mg/dl):</label>
+            <input type="number" step="0.1" id="cholesterol" name="cholesterol" required><br>
+
+            <label for="triglycerides">Triglycerides (mg/dl):</label>
+            <input type="number" step="0.1" id="triglycerides" name="triglycerides" required><br>
+
+            <label for="hdl">HDL (mg/dl):</label>
+            <input type="number" step="0.1" id="hdl" name="hdl" required><br>
+
+            <label for="ldl">LDL (mg/dl):</label>
+            <input type="number" step="0.1" id="ldl" name="ldl" required><br>
+
+            <label for="vldl">VLDL (mg/dl):</label>
+            <input type="number" step="0.1" id="vldl" name="vldl" required><br>
+
+            <label for="totalLipid">Total Lipid (mg/dl):</label>
+            <input type="number" step="0.1" id="totalLipid" name="totalLipid" required><br>
+
+            <h3>Urine Analysis</h3>
+            <label for="uvolume">Volume:</label>
+            <input type="number" id="uvolume" name="uvolume" required><br>
+
+            <label for="ucolor">Color:</label>
+            <input type="text" id="ucolor" name="ucolor" required><br>
+
+            <label for="uappearance">Appearance:</label>
+            <input type="text" id="uappearance" name="uappearance" required><br>
+
+            <label for="reaction">Reaction</label>
+            <input type="text" id="reaction" name="reaction" required><br>
+
+            <label for="specificGtavity">Specific Gtavity:</label>
+            <input type="number" step="0.001" id="specificGtavity" name="specificGtavity" required><br>
+
+            <h3>Chemical Examination of Urine</h3>
+            <label for="sugar">Sugar</label>
+            <input type="text" id="sugar" name="sugar" required><br>
+
+            <label for="urea">Urea</label>
+            <input type="text" id="urea" name="urea" required><br>
+
+            <label for="protein">Protein:</label>
+            <input type="text" id="protein" name="protein" required><br>
+
+            <label for="bilesalt">Bilesalt/ Bile Pegement</label>
+            <input type="text" id="bilesalt" name="bilesalt" required><br>
+
+            <label for="urobilinogen">Urobilinogen</label>
+            <input type="text" id="urobilinogen" name="urobilinogen" required><br>
+
+            <label for="occultblood">Occult Blood</label>
+            <input type="text" id="occultblood" name="occultblood" required><br>
+
+            <label for="ketones">Ketones Bodies</label>
+            <input type="text" id="ketones" name="ketones" required><br>
+
+            <h3>Microscopic Examination of Urine</h3>
+            <label for="leukocytes">Leukocytes</label>
+            <input type="text" id="leukocytes" name="leukocytes" required><br>
+
+            <label for="epithelialCells">Epithelial Cells</label>
+            <input type="text" id="epithelialCells" name="epithelialCells" required><br>
+
+            <label for="casts">Casts</label>
+            <input type="text" id="casts" name="casts" required><br>
+
+            <label for="crystals">Crystals</label>
+            <input type="text" id="crystals" name="crystals" required><br>
+
+            <label for="bacteria">Bacteria</label>
+            <input type="text" id="bacteria" name="bacteria" required><br>
+
+            <label for="spermotazoa">Spermotazoa</label>
+            <input type="text" id="spermotazoa" name="spermotazoa" required><br>
+
+            <label for="parasite">Parasite</label>
+            <input type="text" id="parasite" name="parasite" required><br>
+
+            <h3>STUTUM Examination</h3>
+            <label for="stain">Stain</label>
+            <input type="text" id="stain" name="stain" required><br>
+
+            <label for="sresult">Result</label>
+            <input type="text" id="sresult" name="sresult" required><br>
+
+            <h3>STOOL Physical Examination</h3>
+            <label for="stcolor">Colour</label>
+            <input type="text" id="stcolor" name="stcolor" required><br>
+
+            <label for="stconsistency">Consistency</label>
+            <input type="text" id="stconsistency" name="stconsistency" required><br>
+
+            <label for="stmucus">Mucus</label>
+            <input type="text" id="stmucus" name="stmucus" required><br>
+
+            <h3>STOOL Chemical Examination</h3>
+            <label for="stph">Ph</label>
+            <input type="text" id="stph" name="stph" required><br>
+
+            <label for="stocblood">Occult Blood</label>
+            <input type="text" id="stocblood" name="stocblood" required><br>
+
+            <h3>STOOL Microscopic Examination</h3>
+            <label for="stpuscell">Pus cell</label>
+            <input type="text" id="stpuscell" name="stpuscell" required><br>
+
+            <label for="stmacrophage:">Macrophage</label>
+            <input type="text" id="stmacrophage" name="stmacrophage" required><br>
+
+            <label for="stova">OVA</label>
+            <input type="text" id="stova" name="stova" required><br>
+
+            <label for="stredcells">Red Cells</label>
+            <input type="text" id="stredcells" name="stredcells" required><br>
+
+            <label for="stcysts">Cysts</label>
+            <input type="text" id="stcysts" name="stcysts" required><br>
+
+            <label for="stlarva">Larva</label>
+            <input type="text" id="stlarva" name="stlarva" required><br>
+
+            <label for="stftglobules">Flat Globules</label>
+            <input type="text" id="stftglobules" name="stftglobules" required><br>
+
+            <label for="starchgranules">Starch granules</label>
+            <input type="text" id="starchgranules" name="starchgranules" required><br>
+
+            <label for="stepithelialcells">Epithelial cells</label>
+            <input type="text" id="stepithelialcells" name="stepithelialcells" required><br>
+
+            <label for="stveg">Veg: (Fiber)</label>
+            <input type="text" id="stveg" name="stveg" required><br>
+
+            <button type="button" onclick="generateReport()">Generate Report</button>
+        </form>
+
+        <div id="reportContainer" style="display:none;">
+            <h1>+ JANAHIT HOSPITAL +</h1>
+            <h3>BHAJAIPUR, KHAMARIA, SRN BHADOHI</h3>
+            <hr style="border: 2px solid black;">
+            <p><strong>Patient’s Name:</strong> <span id="reportPatientName"></span></p>
+            <p><strong>Age / Sex:</strong> <span id="reportAgeSex"></span></p>
+            <p><strong>Referred By:</strong> <span id="reportReferredBy"></span></p>
+            <p><strong>Date:</strong> <span id="reportDate"></span></p>
+            <hr style="border: 2px solid black;">
+            <!-- <h3>Hematology Test: CBC</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="cbcResults"></tbody>
+            </table>
+            <h3>Widal Test</h3>
+            <table>
+                <tr>
+                    <th>Titer</th>
+                    <th>1/20</th>
+                    <th>1/40</th>
+                    <th>1/80</th>
+                    <th>1/160</th>
+                    <th>1/320</th>
+                </tr>
+                <tbody id="widalResults"></tbody>
+            </table>
+            <h3>Blood Glucose Test</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="bloodglucoseResults"></tbody>
+            </table>
+            <h3>Liver Function Test (LFT)</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="lftResults"></tbody>
+            </table>
+            <h3>Renal Function Test (RFT)</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="rftResults"></tbody>
+            </table>
+            <h3>Semen Analysis</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="semenAnalysisResults"></tbody>
+            </table>
+
+            <h3>Lipid Profile</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="lipidProfileResults"></tbody>
+            </table>
+            <h3>Urine Analysis</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="urineAnalysisResults"></tbody>
+            </table>
+            <h3>Chemical Examination of Urine</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="chemicalUrineAnalysisResults"></tbody>
+            </table>
+            <h3>Microscopic Examination of Urine</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="microscopicUrineAnalysisResults"></tbody>
+            </table>
+            <h3>STUTUM Examination</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="stutumResults"></tbody>
+            </table>
+            <h3>STOOL Physical Examination</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="stoolPhysicalResults"></tbody>
+            </table>
+            <h3>STOOL Chemical Examination</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="stoolChemicalResults"></tbody>
+            </table>
+            <h3>STOOL Microscopic Examination</h3>
+            <table>
+                <tr>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Unit</th>
+                    <th>Normal Range</th>
+                </tr>
+                <tbody id="stoolMicroscopicResults"></tbody>
+            </table> -->
+            <p><strong>Signature:</strong> __________</p>
+            <p><strong>This report is not valid for medico legal case</strong></p>
+            <button onclick="window.print()">Print Report</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
